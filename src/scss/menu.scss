@@ -1,0 +1,82 @@
+.pizzas{
+    &__inner{
+        position: relative;
+    }
+    &__title{
+        background: #fe5f1e;
+        padding: 10px 25px;
+        font-size: 20px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        color: #fff;
+        font-weight: 500;
+        border-radius: 5px;
+    }
+    &__menu{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px 25px;
+        margin-top: 50px;
+    }
+}
+.pizzas-btn{
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.item{
+    width: 377px;
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 12px -3px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 3px 12px -3px rgba(0,0,0,0.56);
+    box-shadow: 0px 3px 12px -3px rgba(0,0,0,0.56);
+    &__img{
+        // max-width: 360px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    &__content{
+        padding: 5px;
+    }
+    &__name{
+        margin-bottom: 25px;
+        font-size: 24px;
+    }
+    &__components{
+        height: 72px;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 0;
+        -webkit-line-clamp: 3; 
+        display: -webkit-box; 
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    &__price{
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    &__btn{
+        display: inline-block;
+        border: none;
+        padding: 13px 30px;
+        background: #fe5f1e;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        &:hover{
+            background: #ffe006;
+            color: #000;
+            transition: all 0.3s;
+        }
+    }
+}
