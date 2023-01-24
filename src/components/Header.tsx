@@ -5,6 +5,7 @@ import { useSelector } from "react-redux/es/exports";
 import { RootState } from "../redux/store";
 
 export const Header = () => {
+  const [menuClosed, setMenuClosed] = React.useState(false);
   const { totalCount, totalPrice } = useSelector(
     (state: RootState) => state.Cart
   );
@@ -21,30 +22,58 @@ export const Header = () => {
               <img src="images/logo.svg" alt="" className="header__logo-img" />
             </div>
           </NavLink>
-          <nav className="header__menu">
+          <nav
+            className={`${menuClosed ? "header__menu-open" : ""} header__menu`}
+          >
             <ul className="header__menu-list">
               <li className="header__menu-item">
-                <NavLink to="/" className="header__menu-link">
+                <NavLink
+                  onClick={() => setMenuClosed(false)}
+                  to="/menu"
+                  className="header__menu-link"
+                >
                   МЕНЮ
                 </NavLink>
               </li>
               <li className="header__menu-item">
-                <NavLink to="/" className="header__menu-link">
+                <NavLink
+                  onClick={() => setMenuClosed(false)}
+                  to="/delivery"
+                  className="header__menu-link"
+                >
                   Доставка та оплата
                 </NavLink>
               </li>
               <li className="header__menu-item">
-                <NavLink to="/" className="header__menu-link">
+                <NavLink
+                  onClick={() => setMenuClosed(false)}
+                  to="/contacts"
+                  className="header__menu-link"
+                >
                   Контакти
                 </NavLink>
               </li>
               <li className="header__menu-item">
-                <NavLink to="/" className="header__menu-link">
+                <NavLink
+                  onClick={() => setMenuClosed(false)}
+                  to="/about"
+                  className="header__menu-link"
+                >
                   Про нас
                 </NavLink>
               </li>
             </ul>
           </nav>
+          <div
+            onClick={() => {
+              setMenuClosed((prev) => !prev);
+            }}
+            className="open-btn"
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <div className="header__cart">
             <NavLink to="/cart" className="header__button header__button--cart">
               <span className="total__price">{totalPrice} ₽</span>

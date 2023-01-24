@@ -1,7 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../../scss/menu.scss";
+import "../../scss/Pages/catalogs.scss";
+import "../../scss/main.scss";
 import { ItemType } from "../../utils/Types&Interfaces";
 import { Item } from "../Item";
 
@@ -21,9 +22,9 @@ export const Sushi = () => {
     <div className="pizzas">
       <div className="container">
         <div className="pizzas__inner">
-          <a
-            href="/"
+          <NavLink
             className="button button--outline button--add go-back-btn pizzas-btn"
+            to="/menu"
           >
             <svg
               width="8"
@@ -40,11 +41,9 @@ export const Sushi = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <NavLink to="/">
-              <span>Вернуться назад</span>
-            </NavLink>
-          </a>
-          <h2 className="pizzas__title">Суші</h2>
+            <span>Вернуться назад</span>
+          </NavLink>
+          <h2 className="title">Суші</h2>
           <div className="pizzas__menu">
             {sushi && sushi.map((el: ItemType) => <Item key={el.id} {...el} />)}
           </div>

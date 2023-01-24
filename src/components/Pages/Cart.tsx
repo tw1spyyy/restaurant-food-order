@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../../scss/cart.scss";
+import "../../scss/Pages/cart.scss";
 
 import { useSelector } from "react-redux/es/exports";
 

@@ -1,0 +1,18 @@
+.delivery{
+    padding-top: 20px;
+    &__inner{
+        margin-top: 40px;
+    }
+    p {
+        margin-top: 10px;
+        width: 700px;
+    }
+    ul{
+        margin-top: 10px;
+        padding-left: 30px;
+    }
+    li {
+        list-style: auto;
+        margin-bottom: 4px;
+    }
+}

@@ -1,18 +1,7 @@
 .pizzas{
+    padding-top: 20px;
     &__inner{
         position: relative;
-    }
-    &__title{
-        background: #fe5f1e;
-        padding: 10px 25px;
-        font-size: 20px;
-        width: 100px;
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        color: #fff;
-        font-weight: 500;
-        border-radius: 5px;
     }
     &__menu{
         display: grid;

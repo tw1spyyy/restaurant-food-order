@@ -26,3 +26,10 @@ export type CartType = {
   price: number;
   count: number;
 };
+
+export type Chef = {
+  id: number;
+  img: string;
+  name: string;
+  position: string;
+};

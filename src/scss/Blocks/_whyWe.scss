@@ -1,0 +1,63 @@
+.WhyWe{
+    height: 500px;
+    background-image: url('../../../public/images/bg.jpg');
+    position: relative;
+    z-index: -2;
+    margin-bottom: 50px;
+    padding-top: 70px;
+    &::after{
+        background: rgba(0,0,0, 0.7);
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+    }
+    &__title{
+        color: #fff;
+        font-weight: 300;
+        font-size: 35px;
+        line-height: 40px;
+        text-align: center;
+    }
+    &__inner{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 60px;
+        margin-top: 50px;
+    }
+    &__item{
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        &-img{
+            width: 100px;
+        }
+        &-title{
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+        &-text{
+            color: #fff;
+        }
+    }
+    @media(max-width: 800px){
+        height: 400px;
+        padding-top: 20px;
+        &__item{
+            &-text{
+                display: none;
+            }
+        }
+    }
+    @media(max-width: 600px){
+        height: 600px;
+        padding-top: 20px;
+        &__inner{
+           display: block;
+        }
+    }
+}

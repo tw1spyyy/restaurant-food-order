@@ -4,7 +4,7 @@ export const PayPage = () => {
   return (
     <div className="container">
       <p style={{ fontSize: "50px" }}>
-        Здесь должна была быть оплата товара, но с этим сейчас трудности
+        Спасибо за ваш заказ, с вами сейчас свяжется наш менеджер!
       </p>
       <div className="cart__bottom-buttons">
         <a href="/" className="button button--outline button--add go-back-btn">

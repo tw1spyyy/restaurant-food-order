@@ -1,16 +1,16 @@
 import React from "react";
 import { About } from "../Main/About";
 import { Chefs } from "../Main/Chefs";
-import { Menu } from "../Main/Menu";
+import { Top } from "../Main/Top";
 import { WhyWe } from "../Main/WhyWe";
 
 export const Main = () => {
   return (
     <div className="main">
       <div className="main__inner">
-        <Menu />
-        <WhyWe />
+        <Top />
         <About />
+        <WhyWe />
         <Chefs />
       </div>
     </div>

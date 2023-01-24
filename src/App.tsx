@@ -13,6 +13,10 @@ import { useSelector } from "react-redux";
 import { RootState } from "./redux/store";
 import { PayPage } from "./components/Pages/PayPage";
 import { MenuNotFound } from "./components/Pages/MenuNotFound";
+import { Menu } from "./components/Pages/Menu";
+import { Delivery } from "./components/Pages/Delivery";
+import { Contacts } from "./components/Pages/Contacts";
+import { About } from "./components/Main/About";
 
 function App() {
   const cart = useSelector((state: RootState) => state.Cart.cart);
@@ -27,6 +31,10 @@ function App() {
       <div className="wrapper__content">
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/delivery" element={<Delivery />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/about" element={<About />} />
           <Route path="/pizzas" element={<Pizzas />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/burgers" element={<MenuNotFound />} />

@@ -3,10 +3,18 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { RootState } from "../../redux/store";
 
+import { useDispatch } from "react-redux/es/exports";
+import { clearCart } from "../../redux/slices/CartSlice";
+
 export const CartBottom: React.FC = () => {
+  const dispatch = useDispatch();
+
   const { totalCount, totalPrice } = useSelector(
     (state: RootState) => state.Cart
   );
+  const onClearCart = () => {
+    dispatch(clearCart());
+  };
 
   return (
     <div className="cart__bottom">
@@ -35,11 +43,11 @@ export const CartBottom: React.FC = () => {
               strokeLinejoin="round"
             />
           </svg>
-          <NavLink to="/">
+          <NavLink to="/menu">
             <span>Вернуться назад</span>
           </NavLink>
         </a>
-        <NavLink to="/payPage">
+        <NavLink onClick={onClearCart} to="/payPage">
           <div className="button pay-btn">
             <span>Оплатить сейчас</span>
           </div>
