@@ -4,7 +4,6 @@
     position: fixed;
     left: 0;
     right: 0;
-    height: 9vh;
     z-index: 5;
 
     &__inner{
@@ -54,6 +53,7 @@
             transform: translateY(0);
             transition: transform 0.2s ease-in-out;
         }
+       
     }
     
 }
@@ -70,14 +70,17 @@
         background: #000;
         width: 40px;
         height: 4px;
+        transition: all 0.3s;
     }
     & div:nth-child(2) {
         background: #000;
         width: 40px;
-        height: 4px;
+        height: 5px;
         transform: translateY(10px);
+        transition: all 0.3s;
     }
     & div:nth-child(3) {
+        transition: all 0.3s;
         background: #000;
         width: 40px;
         height: 4px;
@@ -85,5 +88,22 @@
     }
     @media(max-width:715px){
         display: block;
+        &--active {
+            margin-top: 10px;
+            & div:nth-child(1) {
+                transition: all 0.3s;
+                transform: rotate(-45deg);
+            }
+            &  div:nth-child(2) {
+                transition: all 0.3s;
+                display: none;
+             }
+             &  div:nth-child(3) {
+                transition: all 0.3s;
+                 transform: rotate(45deg);
+                 height: 4px;
+                 margin-top: -3px;
+             }
+        }
     }
 }

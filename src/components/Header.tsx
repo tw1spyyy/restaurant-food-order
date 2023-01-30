@@ -68,7 +68,7 @@ export const Header = () => {
             onClick={() => {
               setMenuClosed((prev) => !prev);
             }}
-            className="open-btn"
+            className={`${menuClosed ? "open-btn--active" : ""} open-btn`}
           >
             <div></div>
             <div></div>

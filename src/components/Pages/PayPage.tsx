@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export const PayPage = () => {
   return (
-    <div className="container">
+    <div className="payPage__container container">
       <p style={{ fontSize: "50px" }}>
         Спасибо за ваш заказ, с вами сейчас свяжется наш менеджер!
       </p>
